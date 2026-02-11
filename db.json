@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "fb02",
+      "name": "Bruno Henrique",
+      "email": "bruno@gmail.com",
+      "password": "Bc456",
+      "age": "30"
+    },
+    {
+      "id": "eea7",
+      "name": "Carlos Eduardo Mendes",
+      "email": "carlos.mendes@gmail.com",
+      "password": "Teste@456123",
+      "age": "25"
+    },
+    {
+      "id": "165c",
+      "name": "Fernanda Alves Rocha",
+      "email": "fernanda.rocha@hotmail.com",
+      "password": "F3ernanda12987",
+      "age": "20"
+    }
+  ]
+}
