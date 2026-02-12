@@ -3,7 +3,9 @@
 Aplicação Front-End desenvolvida em **React** com integração a uma **API REST**, permitindo cadastrar e buscar usuários de forma dinâmica.
 
 ---
-#### Deploy: https://first-crud-thedevbruno.netlify.app/
+## Deploy
+- https://first-crud-thedevbruno.netlify.app/
+
 ---
 ## Tecnologias Utilizadas
 
