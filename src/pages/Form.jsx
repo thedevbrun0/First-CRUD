@@ -1,12 +1,10 @@
 import "../styles/Form.css";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+
 import api from "../services/api";
 import { useNavigate } from "react-router";
 
 const Form = () => {
-  const [adress, setAdress] = useState("Endereço");
-  const [city, setCity] = useState("Cidade");
   const navigate = useNavigate();
 
   const goToUsers = () => {
@@ -21,9 +19,8 @@ const Form = () => {
 
   const sendForm = async (data) => {
     try {
-      const response = await api.post("/users", data)
-      reset()
-     ;
+      await api.post("/users", data);
+      reset();
     } catch (error) {
       alert("Erro ao Enviar:", error);
     }
@@ -31,11 +28,11 @@ const Form = () => {
 
   return (
     <>
-      <div className="container-form">
+      <div className="form-container">
         <h3>Dados do Usuário</h3>
         <form
           autoComplete="off"
-          className="form"
+          className="form-form"
           onSubmit={handleSubmit(sendForm)}
         >
           <div className="form-group">
@@ -45,7 +42,7 @@ const Form = () => {
               {...register("name", { required: "Digite um nome" })}
             />
             {errors.name && (
-              <p className="errorMessage">{errors.name.message}</p>
+              <p className="form-errorMessage">{errors.name.message}</p>
             )}
           </div>
           <div className="form-group">
@@ -55,7 +52,7 @@ const Form = () => {
               {...register("email", { required: "Digite um email válido" })}
             />
             {errors.email && (
-              <p className="errorMessage">{errors.email.message}</p>
+              <p className="form-errorMessage">{errors.email.message}</p>
             )}
           </div>
           <div className="form-group">
@@ -65,24 +62,28 @@ const Form = () => {
               {...register("password", { required: "Senha Obrigatória" })}
             />
             {errors.password && (
-              <p className="errorMessage">{errors.password.message}</p>
+              <p className="form-errorMessage">{errors.password.message}</p>
             )}
           </div>
           <div className="form-group">
             <input
-              type="number"
+              type="text"
+              inputMode="numeric"
+              pattern="[0-9]*"
               placeholder="Idade"
               {...register("age", {
                 required: "A idade é necessária",
               })}
             />
-            {errors.age && <p className="errorMessage">{errors.age.message}</p>}
+            {errors.age && (
+              <p className="form-errorMessage">{errors.age.message}</p>
+            )}
           </div>
 
-          <button className="send">Enviar Dados</button>
+          <button className="form-send">Enviar Dados</button>
         </form>
-        <button className="clearForm">Limpar Formulário</button>
-        <button className="users" onClick={goToUsers}>
+        <button className="form-clearForm">Limpar Formulário</button>
+        <button className="form-users" onClick={goToUsers}>
           Usuários Cadastrados
         </button>
       </div>

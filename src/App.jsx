@@ -1,20 +1,17 @@
-import { useState } from 'react'
-import { Form } from './pages/Form'
+import { Form } from "./pages/Form";
 
-import './App.css'
+import "./styles/App.css";
 
 function App() {
-
-
   return (
     <>
       <div className="container">
-
-        <Form />
-
+        <div className="form-card">
+          <Form />
+        </div>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

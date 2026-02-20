@@ -1,108 +1,119 @@
-.containerUsers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Times New Roman', Times, serif;
-    gap: 20px;
-
+.user-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.form input {
-    border-radius: 5px;
-    padding: 10px;
-    width: 400px;
-    text-align: left;
-    display: flex;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: black;
-    background-color: rgb(141, 140, 140);
-    font-size: 18px;
+.user-containerUsers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 300px;
+  min-height: 400px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  gap: 10px;
 }
 
-
-.back {
-    padding: 10px;
-    background-color: transparent;
-    font-size: 40px;
-    margin-bottom: 30px;
-    border: none;
+.user-containerUsers h2 {
+  font-size: 20px;
 }
 
-.back-icon {
-    background-color: transparent;
-    border: none;
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.user-form input {
+  width: 200px;
+  background-color: transparent;
+  border: 0.5px solid black;
+  border-radius: 2px;
+  padding: 8px;
+  outline: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.back:active {
-    transform: scale(0.9)
+.user-form input::placeholder {
+  color: black;
+  text-align: center;
 }
 
-.back:hover {
-    font-size: 43px;
+.user-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.search {
-    padding: 10px;
-    border-radius: 5px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(0, 0, 0);
-    width: auto;
-    background-color: rgb(141, 140, 140);
-    font-size: 18px;
-    ;
+.user-search,
+.user-clear {
+  padding: 5px;
+  width: 130px;
+  font-size: 12px;
+  border-radius: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(0, 0, 0);
+  border: 0.5px solid black;
+  background-color: transparent;
 }
 
-.search:active {
-    transform: scale(0.9)
+.user-back-icon {
+  background-color: transparent;
+  border: none;
 }
 
-.search:hover {
-    font-size: 20px;
+.user-back {
+  background-color: transparent;
+  font-size: 30px;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.user-search:active,
+.user-clear:active,
+.user-back:active {
+  transform: scale(0.9);
 }
 
-.clear {
-    padding: 10px;
-    border-radius: 5px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(0, 0, 0);
-    width: auto;
-    background-color: rgb(141, 140, 140);
-    font-size: 18px;
-    ;
+.user-search:hover,
+.user-clear:hover,
+.user-back:hover {
+  color: rgba(156, 155, 155, 0.887);
+  transition: 0.5s;
 }
 
-.clear:active {
-    transform: scale(0.9)
+.user-list-container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
 }
 
-.clear:hover {
-    font-size: 20px;
+.user-user {
+  list-style-type: none;
+  font-size: 20px;
 }
 
-.user {
-    list-style-type: none;
-    font-size: 20px;
+.user-user li {
+  background-color: transparent;
+  width: auto;
 }
 
-.user li {
-    display: flex;
-    flex-direction: column;
-
-    background-color: rgb(126, 126, 125);
-    width: auto;
-
+.user-user li p {
+  font-size: 12px;
+  padding: 5px;
 }
-
-.user li p {
-    border: 1px solid;
-
-}
-
-
-
 
 @media (max-width: 500px) {
-    .form input {
-        width: 300px;
-    }
 }
