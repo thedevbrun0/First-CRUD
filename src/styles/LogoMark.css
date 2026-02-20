@@ -1,0 +1,22 @@
+.logo-mark-img {
+    width: 30px;
+    position: fixed;
+    bottom: 3px;
+    right: 3px;
+    opacity: 10%;
+    animation: floatTech 4s ease-in-out infinite;
+
+}
+
+
+@keyframes floatTech {
+
+    0%,
+    100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -8px;
+    }
+}

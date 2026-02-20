@@ -1,6 +1,6 @@
 import "../styles/Form.css";
 import { useForm } from "react-hook-form";
-
+import { LogoMark } from "./logo-mark";
 import api from "../services/api";
 import { useNavigate } from "react-router";
 
@@ -87,6 +87,8 @@ const Form = () => {
           Usuários Cadastrados
         </button>
       </div>
+
+      <LogoMark />
     </>
   );
 };

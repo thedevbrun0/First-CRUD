@@ -4,6 +4,7 @@ import "../styles/Users.css";
 import { useForm } from "react-hook-form";
 import api from "../services/api";
 import { IoReturnDownBack } from "react-icons/io5";
+import { LogoMark } from "./logo-mark";
 
 const Users = () => {
   const [list, setList] = useState({});
@@ -75,6 +76,7 @@ const Users = () => {
               </ul>
             </div>
           )}
+          <LogoMark />
         </div>
       </div>
     </>
