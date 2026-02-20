@@ -17,6 +17,7 @@
   width: 90%;
   max-width: 300px;
   min-height: 400px;
+  background-color: rgba(171, 168, 168, 0.367);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
@@ -35,6 +36,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .user-form input {
   width: 200px;
   background-color: transparent;
@@ -80,6 +82,7 @@
   margin: 0;
   padding: 0;
 }
+
 .user-search:active,
 .user-clear:active,
 .user-back:active {
@@ -115,5 +118,4 @@
   padding: 5px;
 }
 
-@media (max-width: 500px) {
-}
+@media (max-width: 500px) {}
